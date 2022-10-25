@@ -1,7 +1,7 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-// asks user for character length
+// asks user for character length. if the amount if less than 8 or greater than 128 characters an alert will appear asking to please input the correct amoung.
 function askCharAmount() {
   var charAmount = prompt("Please chose a password length between 8-128 characters:")
     if (charAmount < 8 || charAmount > 128) {
@@ -34,7 +34,7 @@ function arrayLowHigh(low, high) {
   return array;
 }
 
-// generates password and based on inputs from user
+// randomly generates a password depending on the users input preferences. 
 function generatePassword(charAmount, includeUpper, includeNumber, includeSymbol) {
   console.log("button has been clicked");
   var charCodes = lowerCaseCode;
@@ -55,7 +55,7 @@ function generatePassword(charAmount, includeUpper, includeNumber, includeSymbol
 
 
 
-// prompts user for password parameters
+// prompts user for password character suggestions.
 function writePassword() {
   var charAmount = askCharAmount();
   
