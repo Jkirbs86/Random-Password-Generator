@@ -59,6 +59,7 @@ function generatePassword(charAmount, includeUpper, includeNumber, includeSymbol
 function writePassword() {
   var charAmount = askCharAmount();
   
+  //asks users if they would like to us UpperCase letters in the password. If true, it will include Uppercase. If false will not.
   var upperPrompt = confirm("Would you like to include upper case letters? (click 'OK' for Yes and 'Cancel' for No)");
     if (upperPrompt) {
       var includeUpper = true
@@ -68,6 +69,7 @@ function writePassword() {
       console.log ("includeUpper = " + includeUpper)
     }
   
+  //asks user if numbers would like to be included into the password. True randomly inserts numbers. False skips numbers being used.
   var numberPrompt = confirm("Would you like to include numbers? (click 'OK' for Yes and 'Cancel' for No)");
     if (numberPrompt) {
       var includeNumber = true
@@ -77,6 +79,7 @@ function writePassword() {
       console.log ("includeNumber = " + includeNumber)
     }
 
+  //asks user if they would like symbols used in the password. If ok generates special characters. if cancel then skips.
   var symbolPrompt = confirm("Would you like to include special characters? (click 'OK' for Yes and 'Cancel' for No)");
     if (symbolPrompt) {
       var includeSymbol = true
@@ -94,5 +97,5 @@ function writePassword() {
 
 }
 
-// Add event listener to generate button
+// Adds event listener to generate the button. Once clicked generates Password.
 generateBtn.addEventListener("click", writePassword);
